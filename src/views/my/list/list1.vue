@@ -1,23 +1,16 @@
 <template>
-<div>list 1</div>
+  <div>list 1</div>
 </template>
 
 <script>
-
 export default {
-components: {},
-data() {
-return {
-
+  components: {},
+  data() {
+    return {};
+  },
+  created() {},
+  methods: {},
 };
-},
-created() {
-
-},
-methods: {
-
-},
-}
 </script>
 <style scoped>
 </style>
