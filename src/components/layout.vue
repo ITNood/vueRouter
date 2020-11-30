@@ -1,10 +1,15 @@
 <template>
   <div class="app_wapper">
+   
     <el-container>
       <!-- 左侧菜单 -->
       <el-aside class="slider_container">
+         
         <el-menu class="sub_meuns_wapper" mode="vertical" unique-opened :default-active="$route.path" background-color="#304156" text-color="#fff" active-text-color="#409EFF">
           <!-- 菜单组件 -->
+          <div style="display:flex;align-items: center;justify-content: center;color:white;height:60px">
+            <img src="../assets/logo.png" style="width:40px;">后台管理系统
+          </div>
           <side-Meuns :routes="getRoutes"></side-Meuns>
         </el-menu>
       </el-aside>
@@ -90,6 +95,7 @@ export default {
   left: 0;
   z-index: 1001;
   background-color: rgb(48, 65, 86);
+  overflow-y: auto;
 }
 
 </style>
