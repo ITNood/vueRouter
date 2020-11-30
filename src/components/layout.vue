@@ -5,9 +5,10 @@
       <!-- 左侧菜单 -->
       <el-aside class="slider_container">
          
-        <el-menu class="sub_meuns_wapper" mode="vertical" unique-opened :default-active="$route.path" background-color="#304156" text-color="#fff" active-text-color="#409EFF">
+        <el-menu class="sub_meuns_wapper" mode="vertical" unique-opened :default-active="$route.path" background-color="#304156" text-color="#fff" active-text-color="red">
           <!-- 菜单组件 -->
           <div style="display:flex;align-items: center;justify-content: center;color:white;height:60px">
+            <!-- logo -->
             <img src="../assets/logo.png" style="width:40px;">后台管理系统
           </div>
           <side-Meuns :routes="getRoutes"></side-Meuns>
@@ -73,7 +74,7 @@ export default {
 .app_content {
   min-height: 500px;
   margin-left: 180px;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
   box-sizing: border-box;
 }
 
