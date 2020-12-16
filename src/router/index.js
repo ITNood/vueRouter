@@ -1,3 +1,6 @@
+import {
+  path
+} from 'chromedriver'
 import Vue from 'vue'
 import Router from 'vue-router'
 const layout = () => import('@/components/layout')
@@ -14,6 +17,10 @@ const me = () => import('@/views/my/me')
 const mylist = () => import('@/views/my/list/index')
 const list1 = () => import('@/views/my/list/list1')
 const list2 = () => import('@/views/my/list/list2')
+const news = () => import('@/views/new')
+const upload = () => import('@/views/upload')
+const scroll=()=>import('@/views/infinite')
+const select=()=>import('@/views/selection')
 
 Vue.use(Router)
 // 固定的路由表
@@ -47,7 +54,8 @@ export const fixedRouter = [{
         roles: ['user', 'admin'],
       }
     }]
-  }
+  },
+
 
 ]
 // 需要权限判断展示的路由
@@ -122,7 +130,7 @@ export const permissionRouter = [{
         meta: {
           title: "list列表",
           icon: "el-icon-goods",
-          roles: ['user','admin']
+          roles: ['user', 'admin']
         },
         // 三级菜单写法，对应demotable案例下边的两个菜单
         children: [{
@@ -160,9 +168,67 @@ export const permissionRouter = [{
       }
     ]
   },
+  //新闻中心
+  {
+    path: '',
+    component: layout,
+    children: [{
+      path: 'new',
+      component: news,
+      meta: {
+        title: '新闻中心',
+        icon: 'el-icon-info',
+        roles: ['user', 'admin'],
+      }
+    }]
+  },
+  {
+    path: '',
+    component: layout,
+    children: [{
+      path: 'upload',
+      component: upload,
+      meta: {
+        title: '上传文件',
+        icon: 'el-icon-upload2',
+        roles: ['admin'],
+      }
+    }]
+  },
+  {
+    path:'',
+    component:layout,
+    children:[
+      {
+        path:'infinite',
+        component:scroll,
+        meta:{
+          title:'无线滚动',
+          icon: 'el-icon-info',
+          roles:['admin']
+        }
+      }
+    ]
+  },
+  {
+    path:'',
+    component:layout,
+    children:[
+      {
+        path:'selection',
+        component:select,
+        meta:{
+          title:'selection',
+          icon: 'el-icon-info',
+          roles:['admin']
+        }
+      }
+    ]
+  }
 ]
 
 export default new Router({
+  mode:'history',
   routes: fixedRouter
 
 })

@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <!-- 遍历路由表，生成左侧菜单 -->
     <template v-for="(item,index) in meuns" v-if="!item.hidden">
       <!-- 一级菜单的情况 -->
@@ -44,6 +44,7 @@
       </template>
       <!-- 多级菜单 end-->
     </template>
+    <!--组件end-->
   </div>
 </template>
 <script>

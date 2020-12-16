@@ -41,8 +41,8 @@ export default {
         { id: 6, name: "张三", address: "广东省深圳市福田区" },
         { id: 7, name: "张三", address: "广东省深圳市福田区" },
       ],
-      currentPage4: 4,
-      total:4000,
+      currentPage4: 1,
+      total:400,
     };
   },
   created() {},

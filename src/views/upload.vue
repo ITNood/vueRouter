@@ -1,12 +1,13 @@
 <template>
   <div>
-      welcome to the home!!!
+      <Upload />
   </div>
 </template>
 
 <script>
+import Upload from "../components/upload";
 export default {
-  components: {},
+  components: { Upload },
   data() {
     return {};
   },

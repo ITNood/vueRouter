@@ -1,7 +1,5 @@
 <template>
-  <div>
-      welcome to the home!!!
-  </div>
+  <div>新闻中心</div>
 </template>
 
 <script>

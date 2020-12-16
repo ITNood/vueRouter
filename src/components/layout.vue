@@ -5,7 +5,7 @@
       <!-- 左侧菜单 -->
       <el-aside class="slider_container">
          
-        <el-menu class="sub_meuns_wapper" mode="vertical" unique-opened :default-active="$route.path" background-color="#304156" text-color="#fff" active-text-color="red">
+        <el-menu class="sub_meuns_wapper" mode="vertical" unique-opened :default-active="$route.path" background-color="#304156" text-color="#fff" active-text-color="#42b983">
           <!-- 菜单组件 -->
           <div style="display:flex;align-items: center;justify-content: center;color:white;height:60px">
             <!-- logo -->
@@ -52,7 +52,9 @@ export default {
     outSystem() { //退出系统
       localStorage.setItem("userRole", 'unload')
       // 跳转到登录页的时候顺便刷新
-      window.location.href = window.location.origin + window.location.pathname
+      console.log(window.location.origin)
+      console.log(window.location.pathname)
+      // window.location.href = window.location.origin + window.location.pathname
     },
   },
   mounted() {
@@ -72,7 +74,6 @@ export default {
 }
 
 .app_content {
-  min-height: 500px;
   margin-left: 180px;
   /* border: 1px solid #eee; */
   box-sizing: border-box;

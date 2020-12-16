@@ -1,16 +1,78 @@
 <template>
-  <div>我是三级菜单 案例/table案例/table1页面</div>
+  <div>
+    <Tablelist  @edited="handleClick" :tableData="datalist" />
+    <Page :value="number" @activePge="activeCur" ref="child"/>
+  </div>
 </template>
 <script>
+import Page from "../../../components/pagenation";
+import Tablelist from '../../../components/table'
 export default {
+  components: { Page,Tablelist },
   data() {
     return {
-
+      number:1000,
+      datalist: [
+        {
+          id: 1,
+          date: "2020.11.10",
+          username: "张三",
+          province: "广东",
+          city: "深圳",
+          address: "福田区",
+        },
+        {
+          id: 2,
+          date: "2020.11.10",
+          username: "张三",
+          province: "广东",
+          city: "深圳",
+          address: "福田区",
+        },
+        {
+          id: 3,
+          date: "2020.11.10",
+          username: "张三",
+          province: "广东",
+          city: "深圳",
+          address: "福田区",
+        },
+        {
+          id: 4,
+          date: "2020.11.10",
+          username: "张三",
+          province: "广东",
+          city: "深圳",
+          address: "福田区",
+        },
+        {
+          id: 5,
+          date: "2020.11.10",
+          username: "张三",
+          province: "广东",
+          city: "深圳",
+          address: "福田区",
+        },
+      ],
+    };
+  },
+  created(){
+  },
+  methods: {
+    edite(row) {
+      console.log(row.id);
+    },
+    dele(row) {
+      console.log(row.id);
+    },
+    activeCur(val){
+      console.log(val)
+    },
+    handleClick(row,index){
+      console.log(row,index)
     }
-
-  }
-}
-
+  },
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

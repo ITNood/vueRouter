@@ -4,14 +4,58 @@
 
 }
 
-/*自定义菜单宽度、背景色*/
-#app .el-submenu .el-menu-item,
-#app .nest-menu .el-submenu>.el-submenu__title {
-  min-width: 180px !important;
-  background-color: #1f2d3d !important;
+/* 自定义菜单的背景颜色 */
+a:-webkit-any-link{
+  text-decoration: none;
+}
+.router-link-active .is-active {
+  background-color:rgb(38, 52, 69) !important;
 }
 
-#app .el-submenu .el-menu-item:hover,
-#app .nest-menu .el-submenu>.el-submenu__title:hover {
-  background-color: #001528 !important;
+.avatar-uploader .el-upload {
+  border: 1px solid #999;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
+.list{
+  height:200px;
+  overflow: auto;
+  padding:0;
+}
+.list li{
+  line-height: 40px;
+  background-color: #f8f8f8;
+  text-align: center;
+  list-style: none;
+}
+.list li:nth-child(even){
+  background-color: #B3C0D1;
+}
+.infinite-list-wrapper p{
+  text-align: center;
+}
+.infinite-list-wrapper p i{
+  display: inline-block;
+  margin-right: 5px;
 }
