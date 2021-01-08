@@ -19,8 +19,9 @@ const list1 = () => import('@/views/my/list/list1')
 const list2 = () => import('@/views/my/list/list2')
 const news = () => import('@/views/new')
 const upload = () => import('@/views/upload')
-const scroll=()=>import('@/views/infinite')
-const select=()=>import('@/views/selection')
+const scroll = () => import('@/views/infinite')
+const select = () => import('@/views/selection')
+const swiper = () => import('@/views/swiper')
 
 Vue.use(Router)
 // 固定的路由表
@@ -141,7 +142,6 @@ export const permissionRouter = [{
               title: "list1",
               icon: "el-icon-mobile-phone",
               roles: ['admin']
-
             }
           },
           {
@@ -196,39 +196,48 @@ export const permissionRouter = [{
     }]
   },
   {
-    path:'',
-    component:layout,
-    children:[
-      {
-        path:'infinite',
-        component:scroll,
-        meta:{
-          title:'无线滚动',
-          icon: 'el-icon-info',
-          roles:['admin']
-        }
+    path: '',
+    component: layout,
+    children: [{
+      path: 'infinite',
+      component: scroll,
+      meta: {
+        title: '无限滚动',
+        icon: 'el-icon-info',
+        roles: ['admin']
       }
-    ]
+    }]
   },
   {
-    path:'',
-    component:layout,
-    children:[
-      {
-        path:'selection',
-        component:select,
-        meta:{
-          title:'selection',
-          icon: 'el-icon-info',
-          roles:['admin']
-        }
+    path: '',
+    component: layout,
+    children: [{
+      path: 'selection',
+      component: select,
+      meta: {
+        title: 'selection',
+        icon: 'el-icon-info',
+        roles: ['admin']
       }
-    ]
+    }]
+  },
+  {
+    path: '',
+    component: layout,
+    children: [{
+      path: 'swiper',
+      component: swiper,
+      meta: {
+        title: 'swiper',
+        icon: 'el-icon-info',
+        roles: ['admin', 'user']
+      }
+    }]
   }
 ]
 
 export default new Router({
-  mode:'history',
+  mode: 'history',
   routes: fixedRouter
 
 })

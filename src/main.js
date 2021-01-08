@@ -6,6 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import infiniteScroll from 'vue-infinite-scroll'
+import 'swiper/css/swiper.min.css';
+
 
 import '@/utils/global'//全局
 // 控制路由表的js文件

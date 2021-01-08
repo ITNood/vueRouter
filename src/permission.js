@@ -6,7 +6,6 @@ var addRouFlag = false
 router.beforeEach((to, from, next) => {
   // 取到用户的角色
   let GetRole = localStorage.getItem("userRole")
-
   // 如果登录了
   if (GetRole&&GetRole !== 'unload') {
     next() //next()方法后的代码也会执行
@@ -30,7 +29,6 @@ router.beforeEach((to, from, next) => {
       next('/')
     }
   }
-
 })
 
 

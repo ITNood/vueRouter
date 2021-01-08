@@ -11,7 +11,7 @@ export default {
   components: { Page,Tablelist },
   data() {
     return {
-      number:1000,
+      number:100,
       datalist: [
         {
           id: 1,
@@ -53,6 +53,14 @@ export default {
           city: "深圳",
           address: "福田区",
         },
+        {
+          id:6,
+          date:'2020.12.17',
+          username:'李四',
+          province:'广东',
+          city:'广州',
+          address:'天河区'
+        }
       ],
     };
   },
